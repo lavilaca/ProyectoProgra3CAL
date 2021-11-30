@@ -1,0 +1,9 @@
+com\sc403\proyectocal\resources\JavaEE8Resource.class
+controller\UsuarioController.class
+controller\ArticuloController.class
+gestion\UsuarioGestion.class
+model\Conexion.class
+model\Usuario.class
+com\sc403\proyectocal\JAXRSConfiguration.class
+gestion\ArticuloGestion.class
+model\Articulo.class
