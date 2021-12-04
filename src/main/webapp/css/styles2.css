@@ -4627,7 +4627,7 @@ textarea.form-control-lg {
 .card-group > .card {
   margin-bottom: 0.75rem;
 }
-@media (min-width: 576px) {
+@media (min-width: 500px) {
   .card-group {
     display: flex;
     flex-flow: row wrap;
@@ -11309,7 +11309,7 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
-.page-section h3.section-subheading, .page-section .section-subheading.h3 {
+.page-section h3.section-subheading, .page-section .section-subheading.h3, .my-5.h2 {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
