@@ -11783,9 +11783,8 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .map-container-section {
   overflow:hidden;
-  padding-bottom:56.25%;
+  padding-bottom:100%;
   position:relative;
-  height:0;
 }
 .map-container-section iframe {
   left:0;
