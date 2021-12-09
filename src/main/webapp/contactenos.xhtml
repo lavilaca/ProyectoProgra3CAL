@@ -6,13 +6,12 @@
      
 
     <h:head>
-        <title>Inicio</title>
-         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <title>Contactenos</title>
+        
         <link href="css/styles2.css" rel="stylesheet" type="text/css"/>
     </h:head>
     <h:body>
-        
+       
        <ui:composition template="./resources/plantilla/plantilla.xhtml">
 <ui:define name="content">
     <center><img src="http://www.optimizacionri.com/ori/images/banners/contactanos.png" alt="" width="500" height="200" align="center"></img></center>
@@ -21,10 +20,11 @@
 
   <!-- Section heading -->
   <h2 class="h1-responsive font-weight-bold text-center my-5"></h2>
+ 
   <!-- Section description -->
-  <p class="text-center w-responsive mx-auto pb-5">No hay nada que nos guste más que ayudarle a nuestros clientes y comenzar un nuevo proyecto.</p>
-      <p class="text-center w-responsive mx-auto pb-5">Hagamos algo genial juntos.</p>
-       <br>        </br>
+  <center><label for="form-Subject">No hay nada que nos guste más que ayudarle a nuestros clientes y comenzar un nuevo proyecto.</label></center>
+      <center><label for="form-Subject">HAGAMOS ALGO GENIAL JUNTOS.</label></center>
+       <p>        </p>
   <!-- Grid row -->
   <div class="row">
 
@@ -36,38 +36,48 @@
         <div class="card-body">
           <!-- Header -->
           <div class="form-header blue accent-1" >
-            <h3 class="mt-2" icon-awesome="fa-group"><i class="fas fa-envelope" ></i>Escribanos:</h3>
+            <h3 class="mt-2">Escribanos:</h3>
+            
           </div>
-          <p class="dark-grey-text">Le ayudaremos a la brevedad posible.</p>
+          <p class="dark-grey-text">Por favor llene el formulario y se le respondera en las proximas 24 horas .<a href="mailto:info@ferreteriacal.com">O envienos un correo directamente</a></p>
+          
           <!-- Body -->
           <div class="md-form">
-            <i class="fas fa-user prefix grey-text"></i>
-             <label for="form-name" >Su nombre</label>
+            
+             <label for="form-name" >Su nombre:</label>
             <input type="text" id="form-name" class="form-control">
-           <br>        </br>
+           <p>
+          </p>
           </input></div>
           <div class="md-form">
-            <i class="fas fa-envelope prefix grey-text"></i>
-            <label for="form-email">Su email</label>
-            <input type="text" id="form-email" class="form-control">
-            <br>        </br>
-          </input></div>
+            
+            <label for="form-email">Su email:</label>
+            <input type="text" id="form-email" class="form-control" placeholder="info@dominio.com"/>
+            
+            <p>
+          </p>
+          </div>
           <div class="md-form">
-            <i class="fas fa-tag prefix grey-text"></i>
-            <label for="form-Subject">Asunto</label>
+            
+            <label for="form-Subject">Asunto:</label>
             <input type="text" id="form-Subject" class="form-control">
-            <br>        </br>
+           <p>
+          </p>
           </input></div>
           <div class="md-form">
-            <i class="fas fa-pencil-alt prefix grey-text"></i>
-            <label for="form-text">Mensaje</label>
+            
+            <label for="form-text">Mensaje:</label>
             <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea>
             
           </div>
           <br>        </br>
+          
+          
           <div class="text-center">
-            <button class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary" onClick="alert('¡Informacion enviada con exito!')">Enviar</button>
           </div>
+          
+          
         </div>
       </div>
       <!-- Form with header -->
@@ -86,23 +96,24 @@
       <!-- Buttons-->
       <div class="row text-center">
         <div class="col-md-4">
-          <a class="btn-floating blue accent-1">
-            <i class="fas fa-map-marker-alt"></i>
-          </a>
+          <p>
+          </p>
+            <div class="timeline-image"><img src="https://img.icons8.com/ios-filled/50/000000/where.png"/></div>
           <p>San Pedro</p>
           <p class="mb-md-0">Costa Rica</p>
         </div>
         <div class="col-md-4">
-          <a class="btn-floating blue accent-1">
-            <i class="fas fa-phone"></i>
-          </a>
+          <p>
+          </p>
+            <div class="timeline-image"><img src="https://img.icons8.com/ios-filled/50/000000/phone-message.png"/></div>
+            
           <p>(+506) 5555-5555</p>
           <p class="mb-md-0">Lun - Dom, 8:00-22:00</p>
         </div>
         <div class="col-md-4">
-          <a class="btn-floating blue accent-1">
-            <i class="fas fa-envelope"></i>
-          </a>
+         <p>
+          </p>
+            <div class="timeline-image"><img src="https://img.icons8.com/ios-glyphs/60/000000/secured-letter--v1.png"/></div>
           <p>info_grupocal@gmail.com</p>
           <p class="mb-0">ventas_grupocal@gmail.com</p>
         </div>
