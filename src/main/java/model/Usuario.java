@@ -10,21 +10,19 @@ package model;
  * @author Luis
  */
 public class Usuario {
-    
+
+        
     private String idUsuario;
     private String pwUsuario;
     private String nombreUsuario;
-    private String idRol;
- 
-    public Usuario (String idUsuario, String nombreUsuario, String idRol){
-        
-        this.idUsuario= idUsuario;
-        this.nombreUsuario= nombreUsuario;
-        this.idRol= idRol;
-        
-    }
+    private String correoCliente;
 
-    //Propiedades GET and SET
+    public Usuario(String idUsuario, String pwUsuario, String nombreUsuario, String correoCliente) {
+        this.idUsuario = idUsuario;
+        this.pwUsuario = pwUsuario;
+        this.nombreUsuario = nombreUsuario;
+        this.correoCliente = correoCliente;
+    }
     
     public String getIdUsuario() {
         return idUsuario;
@@ -50,14 +48,13 @@ public class Usuario {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public String getIdRol() {
-        return idRol;
+    public String getCorreoCliente() {
+        return correoCliente;
     }
 
-    public void setIdRol(String idRol) {
-        this.idRol = idRol;
+    public void setCorreoCliente(String correoCliente) {
+        this.correoCliente = correoCliente;
     }
-    
-    
+
     
 }

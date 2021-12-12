@@ -42,6 +42,7 @@
                 <b:navLink value="FerreteriaCAL" href="#"></b:navLink>
                 <b:navLink value="Acerca" href="#Acerca"></b:navLink>
                 <b:navLink value="Contacto" href="/ProyectoCAL-1.0-SNAPSHOT/faces/contactenos.xhtml"></b:navLink>
+                 <b:navLink value="Sucursales" href="/ProyectoCAL-1.0-SNAPSHOT/faces/Confirmacion.xhtml"></b:navLink>
              <h:form id="loginForm" styleClass="navbar-form navbar-right">
                 <div class="form-group" align="right">
                     <b:inputText placeholder="Usuario"
@@ -336,7 +337,14 @@ De manera rápida y segura.</p>
                     <!-- This is what your users will see when there is-->
                     <!-- an error submitting the form-->
                      
-           
+           <b:row>
+                            <b:column medium-screen="3">
+                                <h:outputLabel value="Mantenga este código para futuras gestiones en la UGeneral"/>
+                            </b:column>
+                            <b:column medium-screen="3">
+                                <p:barcode value="#{prospectoController.toString()}" type="qr" width="400px"/>
+                            </b:column>
+                        </b:row>
    
         <!-- Footer-->
         <footer class="footer py-4">

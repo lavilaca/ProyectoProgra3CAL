@@ -20,7 +20,7 @@ public class Conexion {
     
     
     private static Conexion conexion;
-    private static final String DBURL="jdbc:mysql://localhost:3306/ugeneral?zeroDateTimeBehavior=CONVERT_TO_NULL";
+    private static final String DBURL="jdbc:mysql://localhost:3306/proyectofinal1?zeroDateTimeBehavior=CONVERT_TO_NULL";
     private static Connection conn=null;
     
       private Conexion(){
@@ -28,7 +28,7 @@ public class Conexion {
         try{
             
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            conn= DriverManager.getConnection(DBURL,"ugeneral_user","Prueba123_");
+            conn= DriverManager.getConnection(DBURL,"root","OracleDB123");
         }catch (ClassNotFoundException | SQLException | NoSuchMethodException | SecurityException |
                 InstantiationException | IllegalAccessException | IllegalArgumentException |
                 InvocationTargetException ex){
