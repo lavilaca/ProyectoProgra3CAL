@@ -36,10 +36,10 @@
 
     <h:body>
         <!-- Navigation-->
-<b:navBar brand="FerreteriaCAL" brandHref="#" fixed="top" inverse="true">
+        <b:navBar brandHref="#" inverse="true" >
             <b:navbarLinks>
                 
-               
+                <b:navLink value="FerreteriaCAL" href="#"></b:navLink>
                 <b:navLink value="Acerca" href="#Acerca"></b:navLink>
                 <b:navLink value="Contacto" href="/ProyectoCAL-1.0-SNAPSHOT/faces/contactenos.xhtml"></b:navLink>
              <h:form id="loginForm" styleClass="navbar-form navbar-right">
@@ -67,10 +67,12 @@
                 </div> 
           
                  <br></br>
-                <b:commandButton value="Login"
+                <b:commandButton class="btn btn-success btn-lg float-right" value="Login"
                                          look="sucess"
                                           icon="chevron-right"
                                          style="width: 25%"
+                                         
+                                      
                                          
                                          action="#{usuarioController.valida()}"/>
                 
