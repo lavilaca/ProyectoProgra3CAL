@@ -20,7 +20,7 @@ public class Conexion {
     
     
     private static Conexion conexion;
-    private static final String DBURL="jdbc:mysql://aau9edjobt1vb0.czeospsimpft.us-east-2.rds.amazonaws.com:3306/proyectofinal1?zeroDateTimeBehavior=CONVERT_TO_NULL";
+    private static final String DBURL="jdbc:mysql://aau9edjobt1vb0.czeospsimpft.us-east-2.rds.amazonaws.com:3306/ProyectoFINAL1?serverTimezone=UTC";
     private static Connection conn=null;
     
       private Conexion(){
