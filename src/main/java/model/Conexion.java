@@ -28,7 +28,7 @@ public class Conexion {
         try{
             
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            conn= DriverManager.getConnection(DBURL,"root","OracleDB123");
+            conn= DriverManager.getConnection(DBURL,"rootroot","rootroot");
         }catch (ClassNotFoundException | SQLException | NoSuchMethodException | SecurityException |
                 InstantiationException | IllegalAccessException | IllegalArgumentException |
                 InvocationTargetException ex){
