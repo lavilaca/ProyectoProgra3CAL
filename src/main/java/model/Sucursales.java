@@ -70,11 +70,11 @@ public Sucursales(){
         
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
        
-        return "\"Prospecto\":{\n"
-                + "\"nombre\":\"" + this.Nombre + "\",\n"
-                + "\"nombre\":\"" + this.Nombre + "\",\n"
-                + "\"apellido1\":\"" + this.Correo + "\",\n"
-                + "\"apellido2\":\"" + this.Direccion + "\",\n";
+        return "\"Sucursales\":{\n"
+                + "\"Ferreteria CAL San Jose  Telefono:22556685  Correo:adminSJOFCAL@ferreteriaCAL.com Direccion: 100 metros Sur de la municipalidad de San Jose \":\" \n"
+                + "\"Ferreteria CAL Heredia  Telefono:25634185  Correo:adminHEREDIAFCAL@ferreteriaCAL.com Direccion: Mall Real Cariari, tienda numero 25 \":\" \n"
+                + "\"Ferreteria CAL Cartago  Telefono:28549652  Correo:adminCARTAGOFCAL@ferreteriaCAL.com Direccion: A un costado del maxipali de Cartago Centro \":\" \n"
+                + "\"Ferreteria CAL Puntarenas  Telefono:26469832  Correo:adminPTSFCAL@ferreteriaCAL.com Direccion: Frente asociacion copepuntarenas SA \":\" \n";
                 
      }}
 

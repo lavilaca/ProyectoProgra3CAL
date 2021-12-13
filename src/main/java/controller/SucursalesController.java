@@ -10,6 +10,7 @@ import gestion.SucursalesGestion;
 import java.io.Serializable;
 import java.util.List;
 import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 
 import model.Sucursales;
 
@@ -17,6 +18,7 @@ import model.Sucursales;
  *
  * @author Luis
  */
+@Named(value = "sucursalesController")
 @SessionScoped
 public class SucursalesController extends Sucursales implements Serializable {
     
