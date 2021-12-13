@@ -17,9 +17,9 @@ import model.Usuario;
 
 public class UsuarioGestion {
     
-    private static final String SQL_VALIDA="select nombreUsuario,idRol from usuario where idUsuario=? and pwUsuario=MD5(?)";
+    private static final String SQL_VALIDA="select nombreUsuario,correoCliente from Usuario where idUsuario=? and pwUsuario=MD5(?)";
     
-    public static Usuario Valida (String idUsuario, String password){
+    public static Usuario Valida (String idUsuario, String pwUsuario){
         
         Usuario usuario=null;
         
@@ -27,7 +27,7 @@ public class UsuarioGestion {
             
             PreparedStatement sentencia = Conexion.getConexion().prepareStatement(SQL_VALIDA);
             sentencia.setString(1, idUsuario);
-            sentencia.setString(2, password);
+            sentencia.setString(2, pwUsuario);
             ResultSet rs= sentencia.executeQuery();
             
             if (rs.next()){

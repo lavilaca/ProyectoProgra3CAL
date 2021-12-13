@@ -28,7 +28,7 @@ public class UsuarioController extends Usuario implements Serializable {
         if (usuario!=null){
             this.setIdUsuario(usuario.getIdUsuario());
             this.setNombreUsuario(usuario.getNombreUsuario());
-            this.setIdRol(usuario.getIdRol());
+            this.setCorreoCliente(usuario.getCorreoCliente());
        
             return "principal.xhtml";
         }else{

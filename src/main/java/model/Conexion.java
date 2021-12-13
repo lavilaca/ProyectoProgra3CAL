@@ -20,7 +20,7 @@ public class Conexion {
     
     
     private static Conexion conexion;
-    private static final String DBURL="jdbc:mysql://localhost:3306/ugeneral?zeroDateTimeBehavior=CONVERT_TO_NULL";
+    private static final String DBURL="jdbc:mysql://aau9edjobt1vb0.czeospsimpft.us-east-2.rds.amazonaws.com:3306/ProyectoFINAL1?serverTimezone=UTC";
     private static Connection conn=null;
     
       private Conexion(){
@@ -28,7 +28,7 @@ public class Conexion {
         try{
             
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            conn= DriverManager.getConnection(DBURL,"ugeneral_user","Prueba123_");
+            conn= DriverManager.getConnection(DBURL,"rootroot","rootroot");
         }catch (ClassNotFoundException | SQLException | NoSuchMethodException | SecurityException |
                 InstantiationException | IllegalAccessException | IllegalArgumentException |
                 InvocationTargetException ex){
@@ -37,7 +37,6 @@ public class Conexion {
         
     }
     
-    // Sincronizado significa que no va a haber más de un proceso ejecutando esta instrucción
     public static synchronized Connection getConexion(){
         
         if (conexion==null){

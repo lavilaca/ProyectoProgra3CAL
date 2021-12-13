@@ -36,11 +36,13 @@
 
     <h:body>
         <!-- Navigation-->
-<b:navBar brand="Login" brandHref="#" fixed="top" inverse="true">
+        <b:navBar brandHref="#" inverse="true" >
             <b:navbarLinks>
-                <b:navLink value="Inicio" href="#"></b:navLink>
+                
+                <b:navLink value="FerreteriaCAL" href="#"></b:navLink>
                 <b:navLink value="Acerca" href="#Acerca"></b:navLink>
                 <b:navLink value="Contacto" href="/ProyectoCAL-1.0-SNAPSHOT/faces/contactenos.xhtml"></b:navLink>
+                 <b:navLink value="Sucursales" href="/ProyectoCAL-1.0-SNAPSHOT/faces/Confirmacion.xhtml"></b:navLink>
              <h:form id="loginForm" styleClass="navbar-form navbar-right">
                 <div class="form-group" align="right">
                     <b:inputText placeholder="Usuario"
@@ -66,12 +68,21 @@
                 </div> 
           
                  <br></br>
-                <b:commandButton value="Login"
+                <b:commandButton class="btn btn-success btn-lg float-right" value="Login"
                                          look="sucess"
                                           icon="chevron-right"
                                          style="width: 25%"
                                          
+                                      
+                                         
                                          action="#{usuarioController.valida()}"/>
+                
+                <br></br>
+                <br></br>
+                 <b:column medium-screen="2">
+                                <p:captcha label="Check"/>
+                 </b:column><!-- comment -->
+                 
             </h:form>
         </b:navbarLinks>
               </b:navBar>
@@ -140,7 +151,7 @@ De manera rápida y segura.</p>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="/ProyectoCAL-1.0-SNAPSHOT/faces/Construccion.xhtml">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -161,7 +172,7 @@ De manera rápida y segura.</p>
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/casa.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/img/portfolio/hogar.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
 
@@ -198,58 +209,49 @@ De manera rápida y segura.</p>
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Acerca Nosotros</h2>
+                    <h2 id="Acerca">Acerca Nosotros</h2>
                     <h3 class="section-subheading text-muted">Somos líderes a nivel nacional en venta de herramientas, los mejores nos prefieren por nuestra calidad</h3>
                 </div>
                 <ul class="timeline">
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/lalinde.jpeg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
+                                <h4>CEO</h4>
+                                <h4 class="subheading">Carlos Lalinde</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted"> Nuestro Equipo es liderado por el Ingeniero Carlos Lalinde con mas de 20 años de experiencia en el mercado</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/adonis.jpeg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
+                                <h4>Director de Mercado</h4>
+                                <h4 class="subheading">Adonis Rivera</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Con mas de 3 maestrias en el area de comercio, nuestro lider en adquisicion de nuestros mejores productos es liderado por nuestro prestigioso ejecutivo Adonis Rivera</p></div>
                         </div>
                     </li>
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/luis.jfif" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>December 2015</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
+                                <h4>Nuestros Empleados</h4>
+                                <h4 class="subheading">Luis Avila</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted"> Contamos con mas de 500 empleados alreadedor del pais que le ofreceran la mejora calidad en el servicio</p></div>
                         </div>
                     </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>July 2020</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
+                  
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <h4>
-                                Be Part
+                            <h4 href="/ProyectoCAL-1.0-SNAPSHOT/faces/contactenos.xhtml">
+                                Se parte
                                 <br />
-                                Of Our
+                                de nuestro
                                 <br />
-                                Story!
+                                Equipo!
                             </h4>
                         </div>
                     </li>
@@ -260,61 +262,34 @@ De manera rápida y segura.</p>
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Sucursales</h2>
+                    <h3 class="section-subheading text-muted">Escanea el codigo y conoceras nuestro directorio telefonico</h3>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
-                            <h4>Parveen Anand</h4>
-                            <p class="text-muted">Lead Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                
+                 <div class="col-lg-4">
+                         <b:column medium-screen="3">
+                                <p:barcode value="#{sucursalesController.toString()}" type="qr" width="400px"/>
+                            </b:column>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                            <h4>Diana Petersen</h4>
-                            <p class="text-muted">Lead Marketer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
-                            <h4>Larry Parker</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
-                </div>
             </div>
+            
+
         </section>
         <!-- Clients-->
         <div class="py-5">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." /></a>
+                        
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." /></a>
+                        <a href="https://twitter.com"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/twitter.png" alt="..." /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." /></a>
+                        <a href="https://www.facebook.com"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." /></a>
+                       
                     </div>
                 </div>
             </div>
@@ -335,7 +310,7 @@ De manera rápida y segura.</p>
                     <!-- This is what your users will see when there is-->
                     <!-- an error submitting the form-->
                      
-           
+        
    
         <!-- Footer-->
         <footer class="footer py-4">

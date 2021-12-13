@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.text.SimpleDateFormat;
+
 
 public class Articulo {
 
@@ -45,8 +47,8 @@ public Articulo() {
 
     public void setPrecio(String precio) {
         this.precio = precio;
-    }
+    }}
+
+   
 
     
-    
-}
