@@ -17,7 +17,7 @@ public class UsuarioController extends Usuario implements Serializable {
 
     
     public UsuarioController() {
-        super ("","","","");      
+        super ("","","");      
         
     }
     

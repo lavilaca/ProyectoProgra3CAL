@@ -17,12 +17,13 @@ public class Usuario {
     private String nombreUsuario;
     private String correoCliente;
 
-    public Usuario(String idUsuario, String pwUsuario, String nombreUsuario, String correoCliente) {
+    public Usuario(String idUsuario, String nombreUsuario, String correoCliente) {
         this.idUsuario = idUsuario;
-        this.pwUsuario = pwUsuario;
         this.nombreUsuario = nombreUsuario;
         this.correoCliente = correoCliente;
     }
+
+   
     
     public String getIdUsuario() {
         return idUsuario;

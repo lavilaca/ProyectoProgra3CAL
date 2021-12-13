@@ -31,7 +31,7 @@ public class UsuarioGestion {
             ResultSet rs= sentencia.executeQuery();
             
             if (rs.next()){
-                usuario = new Usuario(idUsuario,rs.getString(1),rs.getString(2),rs.getString(3));
+                usuario = new Usuario(idUsuario,rs.getString(1),rs.getString(2));
             }
             
         }catch (SQLException ex){
