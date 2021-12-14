@@ -5,25 +5,34 @@
  */
 package model;
 
-import java.text.SimpleDateFormat;
-
 
 public class Articulo {
 
      private String id;
+     private String nombre;
      private String description;
      private String precio;
+     
 
  
      
-    public Articulo(String id,String description, String precio){
+    public Articulo(String id,String nombre, String description, String precio){
  this.id = id;
+ this.nombre=nombre;
   this.description = description;  
    this.precio = precio;     
 }
 
 public Articulo() {
 }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
     public String getId() {
         return id;

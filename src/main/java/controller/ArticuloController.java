@@ -10,25 +10,125 @@ import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import model.Articulo;
 
-/**
- *
- * @author Luis
- */
+
 @Named(value = "articuloController")
 @SessionScoped
 public class ArticuloController extends Articulo implements Serializable {
 
     /**
      * Creates a new instance of ArticuloController
+     * @return 
      */
-    public ArticuloController() {
+   public String inserta (){
+        
+        if (ArticuloGestion.insertar(this)){
+            return "list.xhtml";
+        }else{
+            FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
+            "Error","Posible id duplicada");
+            FacesContext.getCurrentInstance().addMessage("editaPlatosForm:id",mensaje);
+            return "editar.xhtml";
+        } 
     }
     
-    public List<Articulo> getArticulos(){
+    public String modifica (){
+        
+        if (ArticuloGestion.actualiza(this)){
+            return "list.xhtml";
+        }else{
+            FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
+            "Error","Posible id duplicada");
+            FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
+            return "editar.xhtml";
+        }
+    }
+    
+    public String elimina (){
+        
+        if (ArticuloGestion.eliminar(this)){
+            return "list.xhtml";
+        }else{
+            FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
+            "Error","Posible que el id no exista");
+            FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
+            return "editar.xhtml";
+        }
+    }
+    
+    
+   
+
+    public String edita (String id){
+        
+        Articulo articulos = ArticuloGestion.getArticulo(id);
+
+        
+        if (articulos!=null){
+            this.setId(articulos.getId());
+            this.setNombre(articulos.getNombre());
+            this.setPrecio(articulos.getPrecio());
+            this.setDescription(articulos.getDescription());
+            
+            return "editar.xhtml";
+        }else{
+              FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
+            "Error","Posible que el id no exista");
+            FacesContext.getCurrentInstance().addMessage("listForm",mensaje);
+            return "list.xhtml";
+        }
+    }
+    
+        
+         public List<Articulo> getArticulo(){
         
         return ArticuloGestion.getArticulos();
         
+    
     }
+         
+          private boolean noImprimir = true; 
+
+    public boolean isNoImprimir() {
+        return noImprimir;
+    }
+
+    public void setNoImprimir(boolean noImprimir) {
+        this.noImprimir = noImprimir;
+    }
+    
+    
+         public void buscaPlatos (String id){
+        
+        Articulo articulos = ArticuloGestion.getArticulo(id);
+        
+        if (articulos !=null){
+            this.setId(articulos.getId());
+            this.setNombre(articulos.getNombre());
+            this.setPrecio(articulos.getPrecio());
+            this.setDescription(articulos.getDescription());
+            
+            this.noImprimir= false;
+            
+        }else{
+            this.setId("");
+            this.setNombre("");
+            this.setPrecio("");
+            this.setDescription("");
+            
+           
+            FacesMessage mensaje = new FacesMessage (FacesMessage.SEVERITY_WARN, "No Encontrado",
+                    "Articulo no Encontrado");
+            FacesContext.getCurrentInstance().addMessage("datosArticuloForm:id", mensaje);
+            this.noImprimir=true;
+        }
+        
+        
+    }
+    
+    
+    
 }
