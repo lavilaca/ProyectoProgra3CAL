@@ -20,7 +20,7 @@ public class Conexion {
     
     
     private static Conexion conexion;
-    private static final String DBURL="jdbc:mysql://localhost:3306/proyectofinal1?serverTimezone=UTC";
+    private static final String DBURL="jdbc:mysql://proyectofinalprogra.czeospsimpft.us-east-2.rds.amazonaws.com:3306/ProyectoFINAL1?serverTimezone=UTC";
     private static Connection conn=null;
     
       private Conexion(){
@@ -28,7 +28,7 @@ public class Conexion {
         try{
             
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            conn= DriverManager.getConnection(DBURL,"root","root");
+            conn= DriverManager.getConnection(DBURL,"rootroot","rootroot");
         }catch (ClassNotFoundException | SQLException | NoSuchMethodException | SecurityException |
                 InstantiationException | IllegalAccessException | IllegalArgumentException |
                 InvocationTargetException ex){
