@@ -81,17 +81,13 @@ public class ArticuloGestion {
         
         try{
             PreparedStatement sentencia= Conexion.getConexion().prepareCall(SQL_UPDATE_ARTICULO);
-            sentencia.setString(1, articulos.getNombre());
-            sentencia.setString(2, articulos.getPrecio());
-            sentencia.setString(3, articulos.getDescription());
-            sentencia.setString(4, articulos.getId());
-            
+           
+            sentencia.setString(2, articulos.getNombre());
+            sentencia.setString(3, articulos.getPrecio());
+            sentencia.setString(4, articulos.getDescription());
            
             
-            
-            
            
-            
             return sentencia.executeUpdate()>0; 
             
         }catch(SQLException ex){
@@ -121,7 +117,7 @@ public class ArticuloGestion {
     
     
     
-    private static final String SQL_SELECT_ARTICULO= "SELECT * FROM articulo";
+    private static final String SQL_SELECT_ARTICULO= "Select * from articulo";
     
  public static ArrayList<Articulo> getArticulos(){
         
