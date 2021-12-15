@@ -74,8 +74,8 @@ public class ArticuloGestion {
 
     }
     
-       private static final String SQL_UPDATE_ARTICULO = "update articulo set nombre=?,precio=?,"
-            + "descripcion=?";
+       private static final String SQL_UPDATE_ARTICULO = "update articulo set nombreDevice=?,precio=?,"
+            + "descripcion=? where id=?";
     
     public static boolean actualiza (Articulo articulos){
         
@@ -84,6 +84,7 @@ public class ArticuloGestion {
             sentencia.setString(1, articulos.getNombre());
             sentencia.setString(2, articulos.getPrecio());
             sentencia.setString(3, articulos.getDescription());
+            sentencia.setString(4, articulos.getId());
             
            
             

@@ -30,7 +30,7 @@ public class ArticuloController extends Articulo implements Serializable {
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible id duplicada");
-            FacesContext.getCurrentInstance().addMessage("editaPlatosForm:id",mensaje);
+            FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
             return "editar.xhtml";
         } 
     }
