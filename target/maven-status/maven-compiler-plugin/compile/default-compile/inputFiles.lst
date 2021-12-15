@@ -1,17 +1,3 @@
-<<<<<<< Updated upstream
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\gestion\ArticuloGestion.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\com\sc403\proyectocal\JAXRSConfiguration.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\model\Usuario.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\com\sc403\proyectocal\resources\JavaEE8Resource.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\controller\ArticuloController.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\gestion\SucursalesGestion.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\gestion\UsuarioGestion.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\model\Conexion.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\model\Sucursales.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\controller\SucursalesController.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\model\Articulo.java
-C:\Users\arivera\Documents\GitHub\ProyectoProgra3CAL\src\main\java\controller\UsuarioController.java
-=======
 C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\controller\UsuarioController.java
 C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\controller\SucursalesController.java
 C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\model\Conexion.java
@@ -25,4 +11,3 @@ C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\com\sc403\proyec
 C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\controller\ArticuloController.java
 C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\gestion\SucursalesGestion.java
 C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\gestion\UsuarioGestion.java
->>>>>>> Stashed changes
