@@ -67,7 +67,7 @@ public class ArticuloController extends Articulo implements Serializable {
         
         if (articulos!=null){
             this.setId(articulos.getId());
-            this.setNombre(articulos.getNombre());
+            this.setNombreDevice(articulos.getNombreDevice());
             this.setPrecio(articulos.getPrecio());
             this.setDescription(articulos.getDescription());
             
@@ -83,50 +83,10 @@ public class ArticuloController extends Articulo implements Serializable {
         
          public List<Articulo> getArticulo(){
         
-        return ArticuloGestion.getArticulos();
+        return ArticuloGestion.getArticulo();
         
     
     }
-         
-          private boolean noImprimir = true; 
-
-    public boolean isNoImprimir() {
-        return noImprimir;
-    }
-
-    public void setNoImprimir(boolean noImprimir) {
-        this.noImprimir = noImprimir;
-    }
-    
-    
-         public void buscaPlatos (String id){
-        
-        Articulo articulos = ArticuloGestion.getArticulo(id);
-        
-        if (articulos !=null){
-            this.setId(articulos.getId());
-            this.setNombre(articulos.getNombre());
-            this.setPrecio(articulos.getPrecio());
-            this.setDescription(articulos.getDescription());
-            
-            this.noImprimir= false;
-            
-        }else{
-            this.setId("");
-            this.setNombre("");
-            this.setPrecio("");
-            this.setDescription("");
-            
-           
-            FacesMessage mensaje = new FacesMessage (FacesMessage.SEVERITY_WARN, "No Encontrado",
-                    "Articulo no Encontrado");
-            FacesContext.getCurrentInstance().addMessage("datosArticuloForm:id", mensaje);
-            this.noImprimir=true;
-        }
-        
-        
-    }
-    
-    
+      
     
 }

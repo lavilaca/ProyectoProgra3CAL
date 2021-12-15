@@ -21,14 +21,17 @@
                                  columnVisibility="truen"
                                  copy="true"
                                  print="true">
-                        <b:dataTableColumn width="10%" value="#{articulo.id}"
-                                           label="Identificador"/>
-                        <b:dataTableColumn value="#{articulo.nombre}"
-                                           label="Nombre"/>
-                        <b:dataTableColumn value="#{articulo.precio}"
-                                           label="Precio"/>
-                        <b:dataTableColumn value="#{articulo.description}"
-                                           label="Descripcion"/>
+                        <b:dataTableColumn label="Id"
+                            value="#{articulo.id}"/>
+                                           
+                        <b:dataTableColumn label="Articulo"
+                                           value="#{articulo.nombreDevice}"/>
+                                           
+                        <b:dataTableColumn label="Precio"
+                                           value="#{articulo.precio}"/> 
+                        <b:dataTableColumn 
+                                           label="Descripcion"
+                                           value="#{articulo.description}"/>
                         
 
                      <b:dataTableColumn width="12%"
@@ -36,8 +39,14 @@
                                            label="Acción">
                             <b:commandButton value="Editar"
                                              action="#{articuloController.edita(articulo.id)}"
-                                             look="warning"
-                                             />
+                                             look="warning"/>
+                            </b:dataTableColumn>
+                            <b:dataTableColumn width="12%"
+                                           style="text-align: center"
+                                           label="Acción">
+                           <b:commandButton value="Eliminar"
+                                            action="#{articuloController.elimina()}"
+                                             look="danger"/>
                            
                            
                         </b:dataTableColumn>
@@ -52,4 +61,5 @@
         </ui:composition>
     </h:body>
 </html>
+
 

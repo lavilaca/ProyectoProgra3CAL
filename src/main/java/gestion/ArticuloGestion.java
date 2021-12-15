@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package gestion;
 
 import java.sql.PreparedStatement;
@@ -19,24 +15,18 @@ import model.Articulo;
  */
 public class ArticuloGestion {
     
-    private static final String SQL_INSERT_ARTICULO = "insert into articulo (id,nombreDevice,"
-            + "precio, description) values (?,?,?,?)";
+     private static final String SQL_INSERT_ARTICULO = "insert into articulo (id,nombreDevice,precio,description) values (?,?,?,?)";
 
-
-
-
-    
-    public static boolean insertar(Articulo articulos) {
+    public static boolean insertar(Articulo articulo) {
 
         try {
             PreparedStatement sentencia = Conexion.getConexion().prepareCall(SQL_INSERT_ARTICULO);
 
-            sentencia.setString(1, articulos.getId());
-            sentencia.setString(2, articulos.getNombre());
-            sentencia.setString(3, articulos.getPrecio());
-            sentencia.setString(4, articulos.getDescription());
+            sentencia.setString(1, articulo.getId());
+            sentencia.setString(2, articulo.getNombreDevice());
+            sentencia.setString(3, articulo.getPrecio());
+            sentencia.setString(4, articulo.getDescription());
             
-           
 
             return sentencia.executeUpdate() > 0;
 
@@ -47,7 +37,7 @@ public class ArticuloGestion {
 
     }
 
-    private static final String SQL_SELECT_ARTICULOS = "select * from articulo where id=?";
+    private static final String SQL_SELECT_ARTICULO = "select * from articulo where id=?";
 
     public static Articulo getArticulo(String id) {
 
@@ -55,7 +45,7 @@ public class ArticuloGestion {
 
         try {
 
-            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_SELECT_ARTICULOS);
+            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_SELECT_ARTICULO);
             consulta.setString(1, id);
             ResultSet datos = consulta.executeQuery();
             if (datos.next()) {
@@ -74,20 +64,19 @@ public class ArticuloGestion {
 
     }
     
-       private static final String SQL_UPDATE_ARTICULO = "update articulo set nombreDevice=?,precio=?,"
-            + "description=? where id=?";
+       private static final String SQL_UPDATE_ARTICULOS = "update articulo set nombreDevice=?,precio=?,description=? where id=?";
     
     public static boolean actualiza (Articulo articulos){
         
         try{
-            PreparedStatement sentencia= Conexion.getConexion().prepareCall(SQL_UPDATE_ARTICULO);
-           
-            sentencia.setString(2, articulos.getNombre());
-            sentencia.setString(3, articulos.getPrecio());
-            sentencia.setString(4, articulos.getDescription());
-           
+            PreparedStatement sentencia= Conexion.getConexion().prepareCall(SQL_UPDATE_ARTICULOS);
+            sentencia.setString(1, articulos.getNombreDevice());
+            sentencia.setString(2, articulos.getPrecio());
+            sentencia.setString(3, articulos.getDescription());
+            sentencia.setString(4, articulos.getId());
             
            
+            
             return sentencia.executeUpdate()>0; 
             
         }catch(SQLException ex){
@@ -98,12 +87,12 @@ public class ArticuloGestion {
                 
     }
     
-    private static final String SQL_DELETE_ARTICULO= "delete from articulo where id=?";
+    private static final String SQL_DELETE_ARTICULOS= "delete from articulo where id=?";
     
     public static boolean eliminar (Articulo articulos){
         
         try{
-            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_DELETE_ARTICULO);
+            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_DELETE_ARTICULOS);
             consulta.setString(1, articulos.getId());
             
             return consulta.executeUpdate()>0; 
@@ -115,33 +104,28 @@ public class ArticuloGestion {
         return false;
     }
     
-    
-    
-    private static final String SQL_SELECT_ARTICULO= "Select * from articulo";
-    
- public static ArrayList<Articulo> getArticulos(){
-        
-        ArrayList<Articulo> lista= new ArrayList<>();
-        
-        try{
-            
-            PreparedStatement consulta= Conexion.getConexion().prepareStatement(SQL_SELECT_ARTICULO);
+
+    private static final String SQL_SELECT_ARTICULOS = "Select * from articulo";
+
+    public static ArrayList<Articulo> getArticulo() {
+
+        ArrayList<Articulo> lista = new ArrayList<>();
+
+        try {
+
+            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_SELECT_ARTICULOS);
             ResultSet rs = consulta.executeQuery();
-            while (rs!=null && rs.next()){
-                lista.add(new Articulo 
-                       (rs.getString(1),
+            while (rs != null && rs.next()) {
+                lista.add(new Articulo(rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getString(4)
-                       ));
+                        rs.getString(4)));
             }
-            
-        }catch (SQLException ex){
-            Logger.getLogger(ArticuloGestion.class.getName()).log(Level.SEVERE,null,ex);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ArticuloGestion.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return lista;
     }
- 
 }
-

@@ -5,33 +5,23 @@
  */
 package model;
 
-
 public class Articulo {
 
-     private String id;
-     private String nombre;
-     private String description;
-     private String precio;
-     
+    private String id;
+    private String nombreDevice;
+    private String precio;
+    private String description;
+    
 
- 
-     
-    public Articulo(String id,String nombre, String description, String precio){
- this.id = id;
- this.nombre=nombre;
-  this.description = description;  
-   this.precio = precio;     
-}
-
-public Articulo() {
-}
-
-    public String getNombre() {
-        return nombre;
+    public Articulo(String id, String nombreDevice, String precio,String description) {
+        this.id = id;
+        this.nombreDevice = nombreDevice;
+        this.precio = precio;
+        this.description = description;
+        
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public Articulo() {
     }
 
     public String getId() {
@@ -42,6 +32,22 @@ public Articulo() {
         this.id = id;
     }
 
+    public String getNombreDevice() {
+        return nombreDevice;
+    }
+
+    public void setNombreDevice(String nombreDevice) {
+        this.nombreDevice = nombreDevice;
+    }
+
+    public String getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(String precio) {
+        this.precio = precio;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -50,14 +56,4 @@ public Articulo() {
         this.description = description;
     }
 
-      public String getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(String precio) {
-        this.precio = precio;
-    }}
-
-   
-
-    
+}

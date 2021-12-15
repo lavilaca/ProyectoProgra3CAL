@@ -3,18 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-    xmlns:b="http://bootsfaces.net/ui">
-          
-    
+      xmlns:b="http://bootsfaces.net/ui">
+
+
     <h:head>
         <title>Insertar</title>
     </h:head>
     <h:body>
-         <ui:composition template="./../resources/plantillas/plantilla.xhtml">
-             <ui:define name="content">
-                 <h:form id="editaArticuloForm">
+        <ui:composition template="./../resources/plantillas/plantilla.xhtml">
+            <ui:define name="content">
+                <h:form id="editaArticuloForm">
                     <b:panel title="Inserte Articulo" look="success">
-                        
+
                         <b:row>
                             <b:column medium-screen="2">
                                 <h:outputLabel value="Id" for="id"/>
@@ -28,22 +28,22 @@
                                 <b:message for="id"/>
                             </b:column>
                         </b:row>
-                        
+
                         <b:row>
                             <b:column medium-screen="2">
-                                <h:outputLabel value="Articulo" for="nombre"/>
+                                <h:outputLabel value="Articulo" for="nombreDevice"/>
                             </b:column>
                             <b:column medium-screen="4">
-                                <b:inputText placeholder="Articulo" id="nombre"
+                                <b:inputText placeholder="Articulo" id="nombreDevice"
                                              required="true"
-                                             value="#{articuloController.nombre}"/>
+                                             value="#{articuloController.nombreDevice}"/>
                             </b:column>
                             <b:column medium-screen="6" style-class="message">
-                                <b:message for="nombre"/>
+                                <b:message for="nombreDevice"/>
                             </b:column>
                         </b:row>
-                    
-                         <b:row>
+
+                        <b:row>
                             <b:column medium-screen="2">
                                 <h:outputLabel value="Precio" for="precio"/>
                             </b:column>
@@ -55,11 +55,11 @@
                             <b:column medium-screen="6" style-class="message">
                                 <b:message for="precio"/>
                             </b:column>
-                             
+
                         </b:row>
                         <b:row>
                             <b:column medium-screen="2">
-                                <h:outputLabel value="Descripción" for="descripcion"/>
+                                <h:outputLabel value="Descripción" for="description"/>
                             </b:column>
                             <b:column medium-screen="4">
                                 <b:inputText placeholder="Descripción" id="description"
@@ -69,9 +69,9 @@
                             <b:column medium-screen="6" style-class="message">
                                 <b:message for="description"/>
                             </b:column>
-                             
+
                         </b:row>
-                        
+
                         <b:row>
                             <b:column medium-screen="2"/>
                             <b:column medium-screen="6">
@@ -80,31 +80,31 @@
                                                  look="primary"
                                                  style="width: 25%"/>
                                 <a></a>
-                                
+
                                 <b:commandButton value="Modificar"
                                                  action="#{articuloController.modifica()}"
                                                  look="success"
                                                  style="width: 25%"/>
-                                 <a></a>
-                                 <b:commandButton value="Eliminar"
-                                             action="#{articuloController.elimina()}"
-                                             look="danger"
-                                             style="width: 25%"/>
-                                
+                                <a></a>
+                                <b:commandButton value="Eliminar"
+                                                 action="#{articuloController.elimina()}"
+                                                 look="danger"
+                                                 style="width: 25%"/>
+
                             </b:column>
                         </b:row>
-                        
-                        
+
+
                     </b:panel>
-                    
+
                 </h:form>
-                 
-                 
-                 
-                 
-                 
-                 
-                 </ui:define>
+
+
+
+
+
+
+            </ui:define>
         </ui:composition>
     </h:body>
 </html>
