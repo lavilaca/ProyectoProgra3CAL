@@ -77,13 +77,19 @@
                             <b:column medium-screen="6">
                                 <b:commandButton value="Insertar"
                                                  action="#{articuloController.inserta()}"
-                                                 look="success"
-                                                 style="width: 33%"/>
+                                                 look="primary"
+                                                 style="width: 25%"/>
+                                <a></a>
                                 
                                 <b:commandButton value="Modificar"
                                                  action="#{articuloController.modifica()}"
                                                  look="success"
-                                                 style="width: 33%"/>
+                                                 style="width: 25%"/>
+                                 <a></a>
+                                 <b:commandButton value="Eliminar"
+                                             action="#{articuloController.elimina()}"
+                                             look="danger"
+                                             style="width: 25%"/>
                                 
                             </b:column>
                         </b:row>

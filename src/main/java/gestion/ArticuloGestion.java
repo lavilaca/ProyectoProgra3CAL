@@ -20,7 +20,7 @@ import model.Articulo;
 public class ArticuloGestion {
     
     private static final String SQL_INSERT_ARTICULO = "insert into articulo (id,nombreDevice,"
-            + "precio, descripcion) values (?,?,?,?)";
+            + "precio, description) values (?,?,?,?)";
 
 
 
@@ -75,7 +75,7 @@ public class ArticuloGestion {
     }
     
        private static final String SQL_UPDATE_ARTICULO = "update articulo set nombreDevice=?,precio=?,"
-            + "descripcion=? where id=?";
+            + "description=? where id=?";
     
     public static boolean actualiza (Articulo articulos){
         

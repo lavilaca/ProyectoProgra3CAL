@@ -19,10 +19,8 @@ import model.Articulo;
 @SessionScoped
 public class ArticuloController extends Articulo implements Serializable {
 
-    /**
-     * Creates a new instance of ArticuloController
-     * @return 
-     */
+     public ArticuloController() {
+    }
    public String inserta (){
         
         if (ArticuloGestion.insertar(this)){
