@@ -132,7 +132,8 @@ public class ArticuloGestion {
             PreparedStatement consulta= Conexion.getConexion().prepareStatement(SQL_SELECT_ARTICULO);
             ResultSet rs = consulta.executeQuery();
             while (rs!=null && rs.next()){
-                lista.add(new Articulo (rs.getString(1),
+                lista.add(new Articulo 
+                       (rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
                         rs.getString(4)
