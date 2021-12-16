@@ -120,7 +120,7 @@ public class SucursalController extends Sucursal implements Serializable {
             
            
             FacesMessage mensaje = new FacesMessage (FacesMessage.SEVERITY_WARN, "No Encontrado",
-                    "Plato no Encontrado");
+                    "Sucursal no Encontrada");
             FacesContext.getCurrentInstance().addMessage("datosSucursalForm:id", mensaje);
             this.noImprimir=true;
         }
