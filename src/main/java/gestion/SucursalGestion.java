@@ -35,30 +35,31 @@ public class SucursalGestion {
 
     }
 
-    private static final String SQL_SELECT_ARTICULO = "select * from articulo where id=?";
+    private static final String SQL_SELECT_SUCURSAL = "select * from articulo where id=?";
 
-    public static Articulo getArticulo(String id) {
+    public static Sucursal getSucursal(String id) {
 
-        Articulo articulos = null;
+        Sucursal sucursales = null;
 
         try {
 
-            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_SELECT_ARTICULO);
+            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_SELECT_SUCURSAL);
             consulta.setString(1, id);
             ResultSet datos = consulta.executeQuery();
             if (datos.next()) {
-                articulos = new Articulo(
+                sucursales = new Sucursal(
                         datos.getString(1),
                         datos.getString(2),
                         datos.getString(3),
-                        datos.getString(4)
+                        datos.getString(4),
+                        datos.getString(5)
                 );
             }
 
         } catch (SQLException ex) {
             Logger.getLogger(ArticuloGestion.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return articulos;
+        return sucursales;
 
     }
     
