@@ -29,7 +29,7 @@ public class ArticuloController extends Articulo implements Serializable {
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible id duplicada");
             FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
-            return "editar.xhtml";
+            return "edit.xhtml";
         } 
     }
     
@@ -41,7 +41,7 @@ public class ArticuloController extends Articulo implements Serializable {
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible id duplicada");
             FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
-            return "editar.xhtml";
+            return "edit.xhtml";
         }
     }
     
@@ -53,7 +53,7 @@ public class ArticuloController extends Articulo implements Serializable {
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible que el id no exista");
             FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
-            return "editar.xhtml";
+            return "edit.xhtml";
         }
     }
     
@@ -71,7 +71,7 @@ public class ArticuloController extends Articulo implements Serializable {
             this.setPrecio(articulos.getPrecio());
             this.setDescription(articulos.getDescription());
             
-            return "editar.xhtml";
+            return "edit.xhtml";
         }else{
               FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible que el id no exista");
