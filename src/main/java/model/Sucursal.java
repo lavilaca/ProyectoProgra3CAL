@@ -30,9 +30,52 @@ public class Sucursal {
         
         
         
+        
         return texto;      
         
     }
+     
+      public String getTele(){
+        
+        String texto="";
+
+        
+        texto += this.Telefono!=null?this.Telefono+" ":"";
+     
+        
+        
+        
+        return texto;      
+        
+    }
+      public String getMail(){
+        
+        String texto="";
+
+        
+        texto += this.Correo!=null?this.Correo+" ":"";
+     
+        
+        
+        
+        return texto;      
+        
+    }
+      
+      public String getDire(){
+        
+        String texto="";
+
+        
+        texto += this.Direccion!=null?this.Direccion+" ":"";
+     
+        
+        
+        
+        return texto;      
+        
+    }
+    
     
     
     
