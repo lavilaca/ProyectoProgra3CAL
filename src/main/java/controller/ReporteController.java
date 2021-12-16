@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
 import java.io.File;
@@ -20,17 +16,12 @@ import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
-/**
- *
- * @author Luis
- */
+
 @Named(value = "reporteController")
 @SessionScoped
 public class ReporteController implements Serializable {
 
-    /**
-     * Creates a new instance of ReporteController
-     */
+
     public ReporteController() {
     }
     

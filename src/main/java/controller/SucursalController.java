@@ -88,7 +88,7 @@ public class SucursalController extends Sucursal implements Serializable {
         
     
     }
-  private boolean noImprimir = true; // Para habilitar o deshabilitar el botón que imprime la certificación
+  private boolean noImprimir = true; 
 
     public boolean isNoImprimir() {
         return noImprimir;

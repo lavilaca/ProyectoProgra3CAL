@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
 import gestion.EmpleadoGestion;
@@ -19,17 +15,11 @@ import model.Empleado;
 
 
 
-/**
- *
- * @author arivera
- */
 @Named(value = "empleadoController")
 @SessionScoped
 public class EmpleadoController extends Empleado implements Serializable {
 
-    /**
-     * Creates a new instance of EmpleadoController
-     */
+
     public EmpleadoController() {
     }
      public List<Empleado> getEmpleado(){
@@ -39,7 +29,7 @@ public class EmpleadoController extends Empleado implements Serializable {
     
     }
     
-     private boolean noImprimir = true; // Para habilitar o deshabilitar el botón que imprime la certificación
+     private boolean noImprimir = true; 
 
     public boolean isNoImprimir() {
         return noImprimir;
