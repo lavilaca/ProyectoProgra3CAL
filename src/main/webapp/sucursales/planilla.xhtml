@@ -13,17 +13,17 @@
             <ui:define name="content">
                 <h:form id="datosSucursalForm">
                     <b:container fluid="true">
-                        <b:panel title="Busque un Plato" look="primary">
+                        <b:panel title="Busque una sucursal para generar reporte" look="primary">
                             <b:row>
                                 <b:column medium-screen="1">
-                                    <h:outputLabel value="Id del Plato"
+                                    <h:outputLabel value="Id Sucursal"
                                                    for="id"/>
                                 </b:column>
                                 <b:column medium-screen="2">
                                     <b:inputText placeholder=""
                                                  required="true"
                                                  id="id"
-                                                 value="#{platosController.id}"/>
+                                                 value="#{sucursalController.id}"/>
                                 </b:column>
                                 <b:column medium-screen="1">
                                     <b:commandButton value="Buscar"
