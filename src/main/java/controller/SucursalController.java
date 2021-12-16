@@ -27,7 +27,7 @@ public class SucursalController extends Sucursal implements Serializable {
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible id duplicada");
-            FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
+            FacesContext.getCurrentInstance().addMessage("editaSucursalForm:id",mensaje);
             return "edit.xhtml";
         } 
     }
@@ -39,7 +39,7 @@ public class SucursalController extends Sucursal implements Serializable {
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible id duplicada");
-            FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
+            FacesContext.getCurrentInstance().addMessage("editaSucursalForm:id",mensaje);
             return "edit.xhtml";
         }
     }
@@ -51,7 +51,7 @@ public class SucursalController extends Sucursal implements Serializable {
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible que el id no exista");
-            FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
+            FacesContext.getCurrentInstance().addMessage("editaSucursalForm:id",mensaje);
             return "edit.xhtml";
         }
     }
