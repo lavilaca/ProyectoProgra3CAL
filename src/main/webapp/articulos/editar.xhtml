@@ -71,6 +71,20 @@
                             </b:column>
 
                         </b:row>
+                        <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Correo" for="Correo"/>
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:inputText placeholder="Direccion" id="Direccion"
+                                             required="true"
+                                             value="#{sucursalController.direccion}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="direccion"/>
+                            </b:column>
+
+                        </b:row>
                         
                         
                         
