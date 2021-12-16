@@ -89,7 +89,8 @@ public void verPdf(){
         
         Map<String,Object>  parametros = new HashMap<>();
         parametros.put("id", sucursal.getId());
-        parametros.put("nombre", sucursal.getNombreSucursal());
+        parametros.put("nombreSucursal", sucursal.getNombreSucursal());
+        
          
         try{           
             File jasper = new File (FacesContext.getCurrentInstance()

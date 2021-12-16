@@ -11,25 +11,25 @@
     <h:body>
           <ui:composition template="./../resources/plantillas/plantilla.xhtml">
             <ui:define name="content">
-                <h:form id="datosSucursalForm">
+                <h:form id="datosEmpleadoForm">
                     <b:container fluid="true">
-                        <b:panel title="Busque una sucursal para generar reporte" look="primary">
+                        <b:panel title="Busque datos de empleado" look="primary">
                             <b:row>
                                 <b:column medium-screen="1">
-                                    <h:outputLabel value="Id Sucursal"
+                                    <h:outputLabel value="Id Empleado"
                                                    for="id"/>
                                 </b:column>
                                 <b:column medium-screen="2">
                                     <b:inputText placeholder=""
                                                  required="true"
                                                  id="id"
-                                                 value="#{sucursalController.id}"/>
+                                                 value="#{empleadoController.id}"/>
                                 </b:column>
                                 <b:column medium-screen="1">
                                     <b:commandButton value="Buscar"
                                                      icon="search"
                                                      look="success"
-                                                     onclick= "ajax: sucursalController.buscaSucursal(sucursalController.id)"
+                                                     onclick= "ajax: empleadoController.buscaEmpleados(empleadoController.id)"
                                                      update="@form"/>
                                                     
                                 </b:column>
@@ -39,55 +39,43 @@
                             </b:row>
                             <b:row>
                                 <b:column medium-screen="1">
-                                    <h:outputLabel value="Sucursal:" for="nombreSucursal"/>
+                                    <h:outputLabel value="Lugar de trabajo:" for="nombreSucursal"/>
                                 </b:column>
                                 <b:column medium-screen="4">
-                                    <h:outputLabel value="#{sucursalController.descripcion}"/>
+                                    <h:outputLabel value="#{empleadoController.sucursal}"/>
                                 </b:column>
                             </b:row>
                             
                             <b:row>
                                 <b:column medium-screen="1">
-                                    <h:outputLabel value="Telefono:" for="Telefono"/>
+                                    <h:outputLabel value="Nombre:" for="nombreEmpleado"/>
                                 </b:column>
                                 <b:column medium-screen="4">
-                                    <h:outputLabel value="#{sucursalController.tele}"/>
+                                    <h:outputLabel value="#{empleadoController.nombre}"/>
                                 </b:column>
                             </b:row>
-                            
-                             <b:row>
-                                <b:column medium-screen="1">
-                                    <h:outputLabel value="Correo:" for="Correo"/>
-                                </b:column>
-                                <b:column medium-screen="4">
-                                    <h:outputLabel value="#{sucursalController.mail}"/>
-                                </b:column>
-                            </b:row>
-                            
-                             <b:row>
-                                <b:column medium-screen="1">
-                                    <h:outputLabel value="Dirección:" for="Direccion"/>
-                                </b:column>
-                                <b:column medium-screen="4">
-                                    <h:outputLabel value="#{sucursalController.dire}"/>
-                                </b:column>
-                            </b:row>
-                            
-                            
-                            
-                            
-                            
                             <b:row>
-                                <b:column medium-screen="1"/>
-                                <b:column medium-screen="4"/>
-                                <b:commandButton id="btImprimir"
-                                          value="Imprimir"
-                                          look="primary"
-                                          disabled="#{sucursalController.noImprimir}"
-                                          action="#{reporteSucuController.planillas(sucursalController)}"
-                                          icon="print"/>
+                                <b:column medium-screen="1">
+                                    <h:outputLabel value="Puesto:" for="puestoEmpleado"/>
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <h:outputLabel value="#{empleadoController.puesto}"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="1">
+                                    <h:outputLabel value="Salario:" for="salarioEmpleado"/>
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <h:outputLabel value="#{empleadoController.salario}"/>
+                                </b:column>
+                            </b:row>
+                            
+                            
                            
-                            </b:row>
+                            
+                            
+                           
                         </b:panel>
                     </b:container>
                         
