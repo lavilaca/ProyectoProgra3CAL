@@ -87,7 +87,48 @@ public class SucursalController extends Sucursal implements Serializable {
         
     
     }
-      
+  private boolean noImprimir = true; // Para habilitar o deshabilitar el botón que imprime la certificación
+
+    public boolean isNoImprimir() {
+        return noImprimir;
+    }
+
+    public void setNoImprimir(boolean noImprimir) {
+        this.noImprimir = noImprimir;
+    }
+    
+    
+         public void buscaSucursal (String id){
+        
+        Sucursal sucursal = SucursalGestion.getSucursal(id);
+        
+        if (sucursal !=null){
+            this.setId(sucursal.getId());
+            this.setNombreSucursal(sucursal.getNombreSucursal());
+            this.setTelefono(sucursal.getTelefono());
+            this.setCorreo(sucursal.getCorreo());
+            this.setDireccion(sucursal.getDireccion());
+            
+            this.noImprimir= false;
+            
+        }else{
+            this.setId("");
+            this.setNombreSucursal("");
+            this.setTelefono("");
+            this.setCorreo("");
+            this.setDireccion("");
+            
+           
+            FacesMessage mensaje = new FacesMessage (FacesMessage.SEVERITY_WARN, "No Encontrado",
+                    "Plato no Encontrado");
+            FacesContext.getCurrentInstance().addMessage("datosSucursalForm:id", mensaje);
+            this.noImprimir=true;
+        }
+        
+        
+    }
+    
+    
     
 }
 

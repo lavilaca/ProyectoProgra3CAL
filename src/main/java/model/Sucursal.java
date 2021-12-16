@@ -21,6 +21,22 @@ public class Sucursal {
     public Sucursal() {
     }
 
+    
+     public String getDescripcion(){
+        
+        String texto="";
+
+        texto += this.nombreSucursal!=null?this.nombreSucursal+" ":"";
+        
+        
+        
+        return texto;      
+        
+    }
+    
+    
+    
+    
     public String getId() {
         return id;
     }
