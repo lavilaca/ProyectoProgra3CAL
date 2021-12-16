@@ -36,7 +36,7 @@
                             <b:column medium-screen="4">
                                 <b:inputText placeholder="Sucursal" id="nombreSucursal"
                                              required="true"
-                                             value="#{articuloController.nombreSucursal}"/>
+                                             value="#{sucursalController.nombreSucursal}"/>
                             </b:column>
                             <b:column medium-screen="6" style-class="message">
                                 <b:message for="nombreSucursal"/>
@@ -45,44 +45,50 @@
 
                         <b:row>
                             <b:column medium-screen="2">
-                                <h:outputLabel value="Precio" for="precio"/>
+                                <h:outputLabel value="Telefono" for="Telefono"/>
                             </b:column>
                             <b:column medium-screen="4">
-                                <b:inputText placeholder="Precio" id="precio"
+                                <b:inputText placeholder="Telefono" id="Telefono"
                                              required="true"
-                                             value="#{articuloController.precio}"/>
+                                             value="#{sucursalController.telefono}"/>
                             </b:column>
                             <b:column medium-screen="6" style-class="message">
-                                <b:message for="precio"/>
+                                <b:message for="Telefono"/>
                             </b:column>
 
                         </b:row>
                         <b:row>
                             <b:column medium-screen="2">
-                                <h:outputLabel value="Descripción" for="description"/>
+                                <h:outputLabel value="Correo" for="Correo"/>
                             </b:column>
                             <b:column medium-screen="4">
-                                <b:inputText placeholder="Descripción" id="description"
+                                <b:inputText placeholder="Descripción" id="Correo"
                                              required="true"
-                                             value="#{articuloController.description}"/>
+                                             value="#{sucursalController.correo}"/>
                             </b:column>
                             <b:column medium-screen="6" style-class="message">
                                 <b:message for="description"/>
                             </b:column>
 
                         </b:row>
+                        
+                        
+                        
+                        
+                        
+                        
 
                         <b:row>
                             <b:column medium-screen="2"/>
                             <b:column medium-screen="6">
                                 <b:commandButton value="Insertar"
-                                                 action="#{articuloController.inserta()}"
+                                                 action="#{sucursalController.inserta()}"
                                                  look="primary"
                                                  style="width: 25%"/>
                                 <a></a>
 
                                 <b:commandButton value="Modificar"
-                                                 action="#{articuloController.modifica()}"
+                                                 action="#{sucursalController.modifica()}"
                                                  look="success"
                                                  style="width: 25%"/>
                                 <a></a>
