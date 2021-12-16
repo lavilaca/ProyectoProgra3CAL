@@ -6,15 +6,15 @@
       xmlns:b="http://bootsfaces.net/ui"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Articulos</title>
+        <title>Sucursales</title>
     </h:head>
     <h:body>
      
          <ui:composition template="./../resources/plantillas/plantilla.xhtml">
             <ui:define name="content">
                 <h:form>
-                    <b:dataTable value="#{articuloController.articulo}"
-                                 var="articulo"   
+                    <b:dataTable value="#{sucursalController.sucursal}"
+                                 var="sucursal"   
                                  excel="true"
                                  csv="true"
                                  pdf="true"
@@ -22,34 +22,32 @@
                                  copy="true"
                                  print="true">
                         <b:dataTableColumn label="Id"
-                            value="#{articulo.id}"/>
+                                           value="#{sucursal.id}"/>
                                            
                         <b:dataTableColumn label="Articulo"
-                                           value="#{articulo.nombreDevice}"/>
+                                           value="#{sucursal.nombreSucursal}"/>
                                            
                         <b:dataTableColumn label="Precio"
-                                           value="#{articulo.precio}"/> 
+                                           value="#{sucursal.telefono}"/> 
                         <b:dataTableColumn 
                                            label="Descripcion"
-                                           value="#{articulo.description}"/>
+                                           value="#{sucursal.correo}"/>
+                        <b:dataTableColumn 
+                                           label="Descripcion"
+                                           value="#{sucursal.direccion}"/>
                         
 
                      <b:dataTableColumn width="12%"
                                            style="text-align: center"
                                            label="Acción">
                             <b:commandButton value="Editar"
-                                             action="#{articuloController.edita(articulo.id)}"
+                                             action="#{sucursalController.edita(sucursal.id)}"
                                              look="warning"/>
                             </b:dataTableColumn>
-                            <b:dataTableColumn width="12%"
-                                           style="text-align: center"
-                                           label="Acción">
-                           <b:commandButton value="Eliminar"
-                                            action="#{articuloController.elimina()}"
-                                             look="danger"/>
+                            
                            
                            
-                        </b:dataTableColumn>
+                   
                       
                     
                     </b:dataTable>

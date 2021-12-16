@@ -23,7 +23,7 @@ public class SucursalController extends Sucursal implements Serializable {
      public String inserta (){
         
         if (SucursalGestion.insertar(this)){
-            return "list.xhtml";
+            return "lista.xhtml";
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible id duplicada");
@@ -35,7 +35,7 @@ public class SucursalController extends Sucursal implements Serializable {
     public String modifica (){
         
         if (SucursalGestion.actualiza(this)){
-            return "list.xhtml";
+            return "lista.xhtml";
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible id duplicada");
@@ -47,7 +47,7 @@ public class SucursalController extends Sucursal implements Serializable {
     public String elimina (){
         
         if (SucursalGestion.eliminar(this)){
-            return "list.xhtml";
+            return "lista.xhtml";
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible que el id no exista");
@@ -76,7 +76,7 @@ public class SucursalController extends Sucursal implements Serializable {
               FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible que el id no exista");
             FacesContext.getCurrentInstance().addMessage("listForm",mensaje);
-            return "list.xhtml";
+            return "lista.xhtml";
         }
     }
     
