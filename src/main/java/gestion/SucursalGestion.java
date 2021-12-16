@@ -105,21 +105,22 @@ public class SucursalGestion {
     }
     
 
-    private static final String SQL_SELECT_ARTICULOS = "Select * from articulo";
+    private static final String SQL_SELECT_SUCURSALES = "Select * from sucursales";
 
-    public static ArrayList<Articulo> getArticulo() {
+    public static ArrayList<Sucursal> getSucursal() {
 
-        ArrayList<Articulo> lista = new ArrayList<>();
+        ArrayList<Sucursal> lista = new ArrayList<>();
 
         try {
 
-            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_SELECT_ARTICULOS);
+            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_SELECT_SUCURSALES);
             ResultSet rs = consulta.executeQuery();
             while (rs != null && rs.next()) {
-                lista.add(new Articulo(rs.getString(1),
+                lista.add(new Sucursal(rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getString(4)));
+                        rs.getString(4),
+                        rs.getString(5)));
             }
 
         } catch (SQLException ex) {
