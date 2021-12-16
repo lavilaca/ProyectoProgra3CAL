@@ -1,13 +1,13 @@
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\model\Usuario.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\model\Articulo.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\com\sc403\proyectocal\resources\JavaEE8Resource.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\controller\ArticuloController.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\controller\ReporteController.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\gestion\ArticuloGestion.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\gestion\SucursalesGestion.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\model\Conexion.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\model\Sucursales.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\com\sc403\proyectocal\JAXRSConfiguration.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\controller\SucursalesController.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\gestion\UsuarioGestion.java
-F:\Carlos\Universidad\Fidelitas 2020\Cuatrimestre 4\Desarrollo Aplicaciones Web y Patrones\Proyecto\ProyectoProgra3CAL\src\main\java\controller\UsuarioController.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\controller\UsuarioController.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\controller\SucursalesController.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\model\Conexion.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\model\Articulo.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\model\Usuario.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\gestion\ArticuloGestion.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\com\sc403\proyectocal\resources\JavaEE8Resource.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\model\Sucursales.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\controller\ReporteController.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\com\sc403\proyectocal\JAXRSConfiguration.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\controller\ArticuloController.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\gestion\SucursalesGestion.java
+C:\Users\Luis\Documents\GitHub\ProyectoProgra3CAL\src\main\java\gestion\UsuarioGestion.java
