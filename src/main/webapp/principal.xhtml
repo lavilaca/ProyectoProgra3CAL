@@ -2,7 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>principal</title>
     </h:head>
@@ -13,6 +15,35 @@
                 <p>Su Nombre es: ${usuarioController.nombreUsuario}</p>
                 <p>Su Correo es ${usuarioController.correoCliente}</p>
         
+                
+                <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Sucursales</h2>
+                    <h3 class="section-subheading text-muted">Escanea el codigo y conoceras nuestro directorio telefonico</h3>
+                </div>
+                <div class="col-lg-4 text-lg-start">
+                    
+                    
+                </div>
+
+                 <div class="col-lg-4 my-3 my-lg-0">
+                         <b:column medium-screen="3">
+                                <p:barcode value="#{sucursalesController.toString()}" type="qr" width="400px"/>
+                            </b:column>
+                    </div>
+                
+                  <div class="col-lg-4 text-lg-end">  
+                  
+                  
+                  </div>
+
+                  
+            </div>
+            
+
+        </section>
+                 
             </ui:define>
             </ui:composition>
     </h:body>
