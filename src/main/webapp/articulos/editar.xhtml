@@ -13,7 +13,7 @@
         <ui:composition template="./../resources/plantillas/plantilla.xhtml">
             <ui:define name="content">
                 <h:form id="editaArticuloForm">
-                    <b:panel title="Inserte Articulo" look="success">
+                    <b:panel title="Administracion de Articulos" look="success">
 
                         <b:row>
                             <b:column medium-screen="2">
@@ -22,7 +22,7 @@
                             <b:column medium-screen="4">
                                 <b:inputText placeholder="Id" id="id"
                                              required="true"
-                                             value="#{articuloController.id}"/>
+                                             value="#{sucursalController.id}"/>
                             </b:column>
                             <b:column medium-screen="6" style-class="message">
                                 <b:message for="id"/>
@@ -31,15 +31,15 @@
 
                         <b:row>
                             <b:column medium-screen="2">
-                                <h:outputLabel value="Articulo" for="nombreDevice"/>
+                                <h:outputLabel value="Sucursal" for="nombreSucursal"/>
                             </b:column>
                             <b:column medium-screen="4">
-                                <b:inputText placeholder="Articulo" id="nombreDevice"
+                                <b:inputText placeholder="Sucursal" id="nombreSucursal"
                                              required="true"
-                                             value="#{articuloController.nombreDevice}"/>
+                                             value="#{articuloController.nombreSucursal}"/>
                             </b:column>
                             <b:column medium-screen="6" style-class="message">
-                                <b:message for="nombreDevice"/>
+                                <b:message for="nombreSucursal"/>
                             </b:column>
                         </b:row>
 
