@@ -1,13 +1,13 @@
-gestion\SucursalesGestion.class
+controller\SucursalController.class
 controller\ArticuloController.class
+model\Sucursal.class
 gestion\UsuarioGestion.class
-controller\SucursalesController.class
 controller\ReporteController.class
 model\Usuario.class
+gestion\SucursalGestion.class
 com\sc403\proyectocal\resources\JavaEE8Resource.class
 controller\UsuarioController.class
 model\Conexion.class
 com\sc403\proyectocal\JAXRSConfiguration.class
-model\Sucursales.class
 gestion\ArticuloGestion.class
 model\Articulo.class
