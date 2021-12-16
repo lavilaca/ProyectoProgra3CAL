@@ -29,7 +29,7 @@
                                     <b:commandButton value="Buscar"
                                                      icon="search"
                                                      look="success"
-                                                     onclick= "ajax:sucursalController.}"
+                                                     onclick= "ajax: sucursalController.buscaSucursal(sucursalController.id)"
                                                      update="@form"/>
                                                     
                                 </b:column>
@@ -42,7 +42,7 @@
                                     <h:outputLabel value="Nombre de Platos" for="nombre_plato"/>
                                 </b:column>
                                 <b:column medium-screen="4">
-                                    <h:outputLabel value="#{platosController.descripcion}"/>
+                                    <h:outputLabel value="#{sucursalController.descripcion}"/>
                                 </b:column>
                             </b:row>
                             <b:row>
