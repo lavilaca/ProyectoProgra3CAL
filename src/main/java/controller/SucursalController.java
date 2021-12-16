@@ -1,7 +1,7 @@
 
 package controller;
 
-import gestion.ArticuloGestion;
+import gestion.SucursalGestion;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
@@ -13,7 +13,7 @@ import model.Sucursal;
 
 @Named(value = "sucursalController")
 @SessionScoped
-public class SucursalController implements Serializable {
+public class SucursalController extends Sucursal implements Serializable {
 
    
     public SucursalController() {
@@ -22,37 +22,37 @@ public class SucursalController implements Serializable {
     
      public String inserta (){
         
-        if (ArticuloGestion.insertar(this)){
+        if (SucursalGestion.insertar(this)){
             return "list.xhtml";
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible id duplicada");
             FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
-            return "editar.xhtml";
+            return "edit.xhtml";
         } 
     }
     
     public String modifica (){
         
-        if (ArticuloGestion.actualiza(this)){
+        if (SucursalGestion.actualiza(this)){
             return "list.xhtml";
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible id duplicada");
             FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
-            return "editar.xhtml";
+            return "edit.xhtml";
         }
     }
     
     public String elimina (){
         
-        if (ArticuloGestion.eliminar(this)){
+        if (SucursalGestion.eliminar(this)){
             return "list.xhtml";
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible que el id no exista");
             FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
-            return "editar.xhtml";
+            return "edit.xhtml";
         }
     }
     
@@ -61,16 +61,17 @@ public class SucursalController implements Serializable {
 
     public String edita (String id){
         
-        Articulo articulos = ArticuloGestion.getArticulo(id);
+        Sucursal sucursales = SucursalGestion.getSucursal(id);
 
         
-        if (articulos!=null){
-            this.setId(articulos.getId());
-            this.setNombreDevice(articulos.getNombreDevice());
-            this.setPrecio(articulos.getPrecio());
-            this.setDescription(articulos.getDescription());
+        if (sucursales!=null){
+            this.setId(sucursales.getId());
+            this.setNombreSucursal(sucursales.getNombreSucursal());
+            this.setTelefono(sucursales.getTelefono());
+            this.setCorreo(sucursales.getCorreo());
+            this.setDireccion(sucursales.getDireccion());
             
-            return "editar.xhtml";
+            return "edit.xhtml";
         }else{
               FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible que el id no exista");
@@ -80,9 +81,9 @@ public class SucursalController implements Serializable {
     }
     
         
-         public List<Articulo> getArticulo(){
+         public List<Sucursal> getSucursal(){
         
-        return ArticuloGestion.getArticulo();
+        return SucursalGestion.getSucursal();
         
     
     }
