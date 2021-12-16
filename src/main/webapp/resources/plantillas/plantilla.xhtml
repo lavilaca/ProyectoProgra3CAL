@@ -18,11 +18,19 @@
 
          <b:navBar inverse="true" fluid="true" brand="Ferreteria CAL"
             brand-href="../faces/index.xhtml" >
-            <b:navbarLinks pull="left">
-               <b:navLink value="Administrar" href="/ProyectoProgra3CAL/faces/articulos/editar.xhtml"></b:navLink>
-              
-            </b:navbarLinks>
+           
             <b:navbarLinks>
+             
+                 
+                  <b:dropMenu value="Administrar" icon-awesome="fa-bars" >
+                    <b:navLink value="Articulos" icon-awesome="fa-group" href="/ProyectoProgra3CAL/faces/articulos/edit.xhtml"> </b:navLink>
+                    <b:navLink value="Sucursales" href="/ProyectoProgra3CAL/faces/sucursales/editar.xhtml" > </b:navLink>
+                    <b:navLink value="Hogar" href="../faces/Hogar.xhtml"> </b:navLink>
+                    <b:navLink value="Electricidad" href="../faces/Electricidad.xhtml"> </b:navLink>
+                     
+                     
+                    </b:dropMenu>
+                 
                 <b:dropMenu value="Articulos" icon-awesome="fa-newspaper-o" >
                     <b:navLink value="En Stock" icon-awesome="fa-group" href="/ProyectoProgra3CAL/faces/articulos/list.xhtml"> </b:navLink>
                     <b:navLink value="Construccion" href="../faces/Construccion.xhtml" > </b:navLink>
