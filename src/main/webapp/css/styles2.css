@@ -11420,9 +11420,10 @@ header.masthead {
   background-size: cover;
 }
 header.masthead .masthead-subheading {
-  color: red;
-  font-size: 1.5rem;
+  color: black;
+  font-size: 3.5em;
   font-style: italic;
+  font-weight: 900;
   line-height: 1.5rem;
   margin-bottom: 25px;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

@@ -267,24 +267,21 @@ De manera rápida y segura.</p>
         </section>
         <!-- Team-->
         <section class="page-section bg-light" id="team">
+            <center>
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Sucursales</h2>
                     <h3 class="section-subheading text-muted">Escanea el codigo y conoceras nuestro directorio telefonico</h3>
-                </div>
-                  <center><div class="col-lg-4 text-lg-start"></div></center>
-
-                 <center><div class="col-lg-4 my-3 my-lg-0">
+                     <div>
+                         <center>
                          <b:column medium-screen="3">
-                                <p:barcode value="#{sucursalController.toString()}" type="qr" width="400px"/>
+                                <center><p:barcode style="margin-left: 165%;" value="#{sucursalController.toString()}" type="qr" width="400px"/></center>
                             </b:column>
-                    </div></center>
-                  <center><div class="col-lg-4 text-lg-end">    </div></center>
-
-                  
+                             </center>
+                    </div>
+                </div>
             </div>
-            
-
+            </center>
         </section>
                  
         <!-- Clients-->
