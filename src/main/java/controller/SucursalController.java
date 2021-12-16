@@ -142,10 +142,7 @@ public class SucursalController extends Sucursal implements Serializable {
                 
      }
 
-    @Override
-    public String getNombreSucursal() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
 
 
