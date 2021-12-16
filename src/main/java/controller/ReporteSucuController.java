@@ -93,7 +93,7 @@ public void verPdf(){
          
         try{           
             File jasper = new File (FacesContext.getCurrentInstance()
-            .getExternalContext().getRealPath("/reportes/Planillas.jasper"));
+            .getExternalContext().getRealPath("/reportes/Planilla.jasper"));
             
             JasperPrint reporteJasper= JasperFillManager.fillReport(jasper.getPath(),parametros, Conexion.getConexion());
             HttpServletResponse respuesta = (HttpServletResponse)
