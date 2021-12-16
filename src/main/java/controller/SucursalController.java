@@ -1,26 +1,94 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
+import gestion.ArticuloGestion;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.util.List;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+import model.Sucursal;
 
-/**
- *
- * @author arivera
- */
+
 @Named(value = "sucursalController")
 @SessionScoped
 public class SucursalController implements Serializable {
 
-    /**
-     * Creates a new instance of SucursalController
-     */
+   
     public SucursalController() {
+        
     }
     
+     public String inserta (){
+        
+        if (ArticuloGestion.insertar(this)){
+            return "list.xhtml";
+        }else{
+            FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
+            "Error","Posible id duplicada");
+            FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
+            return "editar.xhtml";
+        } 
+    }
+    
+    public String modifica (){
+        
+        if (ArticuloGestion.actualiza(this)){
+            return "list.xhtml";
+        }else{
+            FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
+            "Error","Posible id duplicada");
+            FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
+            return "editar.xhtml";
+        }
+    }
+    
+    public String elimina (){
+        
+        if (ArticuloGestion.eliminar(this)){
+            return "list.xhtml";
+        }else{
+            FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
+            "Error","Posible que el id no exista");
+            FacesContext.getCurrentInstance().addMessage("editaArticuloForm:id",mensaje);
+            return "editar.xhtml";
+        }
+    }
+    
+    
+   
+
+    public String edita (String id){
+        
+        Articulo articulos = ArticuloGestion.getArticulo(id);
+
+        
+        if (articulos!=null){
+            this.setId(articulos.getId());
+            this.setNombreDevice(articulos.getNombreDevice());
+            this.setPrecio(articulos.getPrecio());
+            this.setDescription(articulos.getDescription());
+            
+            return "editar.xhtml";
+        }else{
+              FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
+            "Error","Posible que el id no exista");
+            FacesContext.getCurrentInstance().addMessage("listForm",mensaje);
+            return "list.xhtml";
+        }
+    }
+    
+        
+         public List<Articulo> getArticulo(){
+        
+        return ArticuloGestion.getArticulo();
+        
+    
+    }
+      
+    
 }
+
+    
+
