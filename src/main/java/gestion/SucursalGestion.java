@@ -12,7 +12,7 @@ import model.Sucursal;
 
 
 public class SucursalGestion {
-     private static final String SQL_INSERT_SUCURSAL = "insert into articulo (id,nombreSucursal,Telefono,Correo, Descripcion) values (?,?,?,?,?)";
+     private static final String SQL_INSERT_SUCURSAL = "insert into sucursales (id,nombreSucursal,Telefono,Correo, Descripcion) values (?,?,?,?,?)";
 
     public static boolean insertar(Sucursal sucursal) {
 
@@ -35,7 +35,7 @@ public class SucursalGestion {
 
     }
 
-    private static final String SQL_SELECT_SUCURSAL = "select * from articulo where id=?";
+    private static final String SQL_SELECT_SUCURSAL = "select * from sucursales where id=?";
 
     public static Sucursal getSucursal(String id) {
 
@@ -63,7 +63,7 @@ public class SucursalGestion {
 
     }
     
-       private static final String SQL_UPDATE_SUCURSALES = "update articulo set nombreSucursal=?,Telefono=?,Correo=?,Direccion=? where id=?";
+       private static final String SQL_UPDATE_SUCURSALES = "update sucursales set nombreSucursal=?,Telefono=?,Correo=?,Direccion=? where id=?";
     
     public static boolean actualiza (Sucursal sucursales){
         
@@ -87,13 +87,13 @@ public class SucursalGestion {
                 
     }
     
-    private static final String SQL_DELETE_ARTICULOS= "delete from articulo where id=?";
+    private static final String SQL_DELETE_SUCURSALES= "delete from sucursales where id=?";
     
-    public static boolean eliminar (Articulo articulos){
+    public static boolean eliminar (Sucursal sucursales){
         
         try{
-            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_DELETE_ARTICULOS);
-            consulta.setString(1, articulos.getId());
+            PreparedStatement consulta = Conexion.getConexion().prepareStatement(SQL_DELETE_SUCURSALES);
+            consulta.setString(1, sucursales.getId());
             
             return consulta.executeUpdate()>0; 
             
