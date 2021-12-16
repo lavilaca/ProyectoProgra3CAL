@@ -63,16 +63,17 @@ public class SucursalGestion {
 
     }
     
-       private static final String SQL_UPDATE_ARTICULOS = "update articulo set nombreDevice=?,precio=?,description=? where id=?";
+       private static final String SQL_UPDATE_SUCURSALES = "update articulo set nombreSucursal=?,Telefono=?,Correo=?,Direccion=? where id=?";
     
-    public static boolean actualiza (Articulo articulos){
+    public static boolean actualiza (Sucursal sucursales){
         
         try{
-            PreparedStatement sentencia= Conexion.getConexion().prepareCall(SQL_UPDATE_ARTICULOS);
-            sentencia.setString(1, articulos.getNombreDevice());
-            sentencia.setString(2, articulos.getPrecio());
-            sentencia.setString(3, articulos.getDescription());
-            sentencia.setString(4, articulos.getId());
+            PreparedStatement sentencia= Conexion.getConexion().prepareCall(SQL_UPDATE_SUCURSALES);
+            sentencia.setString(1, sucursales.getNombreSucursal());
+            sentencia.setString(2, sucursales.getTelefono());
+            sentencia.setString(3, sucursales.getCorreo());
+            sentencia.setString(4, sucursales.getDireccion());
+            sentencia.setString(5, sucursales.getId());
             
            
             
