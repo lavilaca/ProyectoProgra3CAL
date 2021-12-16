@@ -5,10 +5,22 @@
  */
 package controller;
 
+import javax.inject.Named;
+import javax.enterprise.context.SessionScoped;
+import java.io.Serializable;
+
 /**
  *
  * @author arivera
  */
-public class SucursalController {
+@Named(value = "sucursalController")
+@SessionScoped
+public class SucursalController implements Serializable {
+
+    /**
+     * Creates a new instance of SucursalController
+     */
+    public SucursalController() {
+    }
     
 }
