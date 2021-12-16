@@ -9,10 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Conexion;
 import model.Articulo;
-/**
- *
- * @author Luis
- */
+
 public class ArticuloGestion {
     
      private static final String SQL_INSERT_ARTICULO = "insert into articulo (id,nombreDevice,precio,description) values (?,?,?,?)";
